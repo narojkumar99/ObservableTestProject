@@ -35,7 +35,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
 
     @Override
     public void onBindViewHolder(PostViewHolder holder, int position) {
-        holder.bindPostViews(postsList.get(position), position);
+        holder.bindPostViews(postsList.get(position));
     }
 
     @Override
@@ -57,7 +57,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.PostViewHold
             text_timing = itemView.findViewById(R.id.text_timing);
         }
 
-        void bindPostViews(final Posts posts, int position){
+        void bindPostViews(final Posts posts){
             text_title.setText(posts.getTitle());
             text_description.setText(posts.getDescription());
 
